@@ -1,0 +1,96 @@
+<html>
+<head>
+<title>User Login</title>
+<link rel="stylesheet" type="text/css" href="styles.css" />
+
+<style>
+
+</style>
+
+<pre>
+<form action="login2.php" method="post" name="myForm"  >
+<font face="Tempus Sans ITC"><h1><center> </center></h1>
+<div class="message"><?php if($message!="") { echo $message; } ?></div>
+  
+<center>
+
+<div class="agileits_main_grid_right">
+				<div class="wthree_payment_grid">
+					<h2>Payment Method</h2>
+					<div id="horizontalTab">
+						<ul class="resp-tabs-list">
+							<li><img src="images/1.jpg"></li>			
+						</ul>
+
+<h1>Payment Form</h1>
+<table border="0" cellpadding="5" cellspacing="1" width="700" align="center">
+<tr class="tableheader">
+<td align="center" colspan="2">Enter Credit Details</td>
+</tr>
+<tr class="tablerow">
+<td align="right">Name on Card</td>
+<td><input type="text" name="user_name"></td>
+</tr>
+<tr class="tablerow">
+<td align="right">Card Number</td>
+<td><input type="password" name="password"></td>
+</tr>
+<tr class="tableheader">
+<a href="home.html">
+<td align="center" colspan="2"><input type="submit" name="Make Payment" value="Make Payment"></a></td>
+</tr>
+</table>
+</form>
+<form action="signup.html"></div>
+</div>
+</div></center>
+
+</form>
+</pre>
+
+<script>
+ function validate()
+      {
+      
+         if( document.myForm.user_name.value == "" )
+         {
+            alert( "Please provide your name!" );
+            document.myForm.name.focus() ;
+            return false;
+         }
+         
+         if( document.myForm.email.value == "" )
+         {
+            alert( "Please provide your Email!" );
+            document.myForm.email.focus() ;
+            return false;
+         }
+        
+		  if( document.myForm.password.value == "" )
+         {
+            alert( "Please provide your password!" );
+            document.myForm.password.focus() ;
+            return false;
+         }
+		  if( document.myForm.confirmpass.value == "" )
+         {
+            alert( "Please confirm password!" );
+            document.myForm.confirmpass.focus() ;
+            return false;
+         }
+         
+         return( true );
+      }
+
+</script>
+
+<style>
+body
+{
+background-image: url("BW.jpg"); 
+  background-size:1600px 900px;
+ background-repeat: no-repeat;
+}
+</style>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!Doctype html>
+<html>
+<style>
+
+
+#myProgress {
+  width: 100%;
+  background-color: #ddd;
+}
+
+#myBar {
+  width: 1%;
+  height: 30px;
+  background-color: #4CAF50;
+}
+
+body {
+    background: url("An.jpg");
+    background-size: 1600px 1200px;
+    background-repeat: no-repeat;
+    padding-top: 40px;
+}
+.vertical-menu {
+    width: 1600px;
+}
+
+.vertical-menu a {
+    background-color: #eee;
+    color: black;
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+}
+
+.vertical-menu a:hover {
+    background-color: #ccc;
+}
+
+.vertical-menu a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+</style>
+<body>
+
+<h1>Course Content</h1>
+
+<div class="vertical-menu">
+  <a href="#" class="active">Home</a>
+  <a href="#">Video 1</a>
+
+
+
+<center>
+
+<div class="floating-box"> <video width="500" controls>
+  <source src="Android1.mp4" type="video/mp4">
+  <source src="mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video> <p>
+<h2> Android Installation</h2>
+</p> </div>
+
+</center>
+
+
+
+  <a href="#">Video2</a>
+<center>
+
+<div class="floating-box"> <video width="500" controls>
+  <source src="Android2.mp4" type="video/mp4">
+  <source src="mov_bbb.ogg" type="video/ogg">
+  Your browser does not support HTML5 video.
+</video> <p>
+<h2> Android Hello World</h2>
+</p> </div>
+
+</center>
+</div>
+<h1>Course Progress Bar</h1>
+
+<div id="myProgress">
+  <div id="myBar"></div>
+</div>
+
+<br>
+
+
+<button onclick="move()">  Click Me</button> 
+<button onclick="move()">     <a href="login.html"> Get Certificate</button> 
+</a>
+<script>
+function move() {
+  var elem = document.getElementById("myBar");   
+  var width = 1;
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (width >= 100) {
+      clearInterval(id);
+    } else {
+      width++; 
+      elem.style.width = width + '%'; 
+    }
+  }
+}
+</script>
+
+</body>
+</html>
